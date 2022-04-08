@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨Srorage Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>STORAGE VALIDATION FORM</h1>
+    <div id="container">
+      <div class="content">
+        <form id="form" onsubmit="displayDetails()" autocomplete="off">
+            
+            <label for="rollnumber">RollNumber:</label><br><br>
+            <input type="number" id="rollnumber" placeholder="Enter your roll number"><br><br>
+            <label for="uname">Name:</label><br><br>
+            <input type="text" id="uname" placeholder="Enter your Name"><br><br>
+            <label for="subject">Subject</label><br><br>
+            <input type="text" id="subject" placeholder="Enter your subject"><br><br>
+            <label for="storages">Storage:</label><br><br>
+              <select name="Options" id="storages" onchange="printSelectedItem()" >
+              <option value="Local Storage" id="local" >Local Storage</option>
+              <option value="SessionStorage" id="session">Session Storage</option>
+              </select><br><br> 
+              <div class="btn">
+                <button type="submit" id="entry">Submit</button>
+              </div>           
+        </form>
+      </div> 
+        
+    </div>
+    <div class="students"></div>
+    <table id="display">
+        <thead>
+            <tr id="raw1">
+                <th>RollNumber</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Storage</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
